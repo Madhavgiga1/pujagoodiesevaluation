@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="video"
+            type="com.example.pujagoodiesevaluation.models.mostwatched.Item" />
+
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginTop="4dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+
+    android:layout_marginBottom="4dp"
+    android:layout_width="match_parent"
+    android:id="@+id/Video_row_layout"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        app:layout_goneMarginStart="5dp"
+        app:cardBackgroundColor="@color/Cream"
+        app:layout_goneMarginEnd="5dp"
+        app:layout_goneMarginTop="5dp"
+        app:layout_goneMarginBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="@color/BalticSeabgcolor"
+        app:cardCornerRadius="15dp"
+        android:padding="10dp"
+        app:strokeWidth="3dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginBottom="16dp"
+                android:text="@{String.valueOf(video.snippet.title)}"
+                app:fontFamily="@font/cherry_swash_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/thumbnail_vid"
+                android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                loadImageFromUrl="@{video.snippet.thumbnails.high.url}"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.033" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

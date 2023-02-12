@@ -2,6 +2,8 @@
     <string name="app_name">PoojaGoodies</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_web_client_id">"AIzaSyDLkia4lUdjro_xmeqwpnk1-m6xVdlQp-g"</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

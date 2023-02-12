@@ -49,9 +49,9 @@ class HomeFragment : Fragment() {
         return binding.root
     }
     private fun prereq(){
-        var channelids=listOf("UCRUAdVm9ZOF4JheOd8qIQHA","UCDe0DwkMVFfSIoiYdQUPQmQ","UCJeQx6mAyNdPUc9sJA866Xw","UCHq7ZxlzRRXimaBmk5QAxSQ",
-            "UCUUIz69kK3Ib5bD4hWLKAwA"
-        )
+        var channelids=listOf("UCRUAdVm9ZOF4JheOd8qIQHA","UCDe0DwkMVFfSIoiYdQUPQmQ","UCJeQx6mAyNdPUc9sJA866Xw","UCHq7ZxlzRRXimaBmk5QAxSQ","UCUUIz69kK3Ib5bD4hWLKAwA"
+            ,"UCU_Qv0QDWtxv6D3fkZ-A0lw","UCCR5eciEJIMvX2o1tiYOUKQ","UCT_QwW7Tbew5qrYNb2auqAQ","UCOizxR3GwY7dmehMCAdvv9g","UCyIkg79GpPVF77qYKoAINtw",
+            "UCDqkux3AH7P9hRjmunoUeAQ","UC7ZivIYRB0fMSGh-THcTYbw","UCaayLD9i5x4MmIoVZxXSv_g","UCHKGDg0GJKBsA9mFraDOLHA")
         channelids.forEach{
             requestAPIdata(applyqueries((it)))
         }
@@ -124,7 +124,7 @@ class HomeFragment : Fragment() {
         queries["order"]="viewCount"
         queries["type"]="video"
         queries["channelId"]=s
-        queries["maxResults"]="2"
+        queries["maxResults"]="8"
         queries["key"]=API_KEY
         return queries
     }

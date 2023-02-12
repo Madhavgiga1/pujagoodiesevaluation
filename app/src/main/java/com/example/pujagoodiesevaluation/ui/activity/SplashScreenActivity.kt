@@ -17,7 +17,7 @@ class SplashScreenActivity : AppCompatActivity() {
         )
         Handler().postDelayed({
             // Start the Intro Activity
-            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+            startActivity(Intent(this@SplashScreenActivity, LoginActivity::class.java))
             finish() // Call this when your activity is done and should be closed.
         }, 1500)
     }
